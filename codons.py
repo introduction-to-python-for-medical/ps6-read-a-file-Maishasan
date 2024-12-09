@@ -1,7 +1,7 @@
 def create_codon_dict(file_path):
     path = "data/codons.txt"
     codon_dict = {}
-    file = open(file_path)
+    file = open(path)
     lines = file.readlines()
     file.close()
     for line in lines:
