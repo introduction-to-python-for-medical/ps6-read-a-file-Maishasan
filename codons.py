@@ -5,9 +5,12 @@ def create_codon_dict(file_path):
     file.close()
     for line in lines:
         line = line.strip()
-        parts = line.split()
-        codon = parts[0]
-        amino_acid = parts[1]
-        codon_dict[codon] = amino_acid
+        if line:
+            parts = line.split()
+            codon = parts[0]
+            amino_acid = parts[1]
+            codon_dict[codon] = amino_acid
+        else:
+            print("invalid line")
     return codon_dict
 
